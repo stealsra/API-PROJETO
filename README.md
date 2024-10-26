@@ -33,14 +33,7 @@ O servidor web do projeto entrará em execução, e será acessível por padrão
 
 E a apresentação da API deverá aparecer.
 
-### Explicações gerais
-
-Esse projeto é uma API REST desenvolvida em NodeJS/JS, utilizando o banco de dados relacional MySQL com um framework ORM
-(mapeador de objetos relacionais).
-
-O projeto apresenta uma camada de autenticação e autorização simples, porém efetiva para proteger os dados de usuários contra acessos indevidos.
-
-Referências (artigos resumidos com leitura recomendada):
+### Referências (artigos resumidos com leitura recomendada):
 
 #### API REST
 - [O que é uma API REST - RedHat](https://www.redhat.com/pt-br/topics/api/what-is-a-rest-api) - Acessado em 26/10/2024 ás 07:06
