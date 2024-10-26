@@ -23,7 +23,8 @@ app.post('/login', (requisicao, resposta, next) => {
         if(resultado !== null)
         {
             const id = resultado.id;
-            const token = jwt.sign({id}, "ISSOEUMSEGREDO", {
+            const segredo = process.env.SEGREDO_JWT || "ISSOEUMSEGREDO";
+            const token = jwt.sign({id}, segredo, {
                 expiresIn: 300
             });
             // Não alterar a mensagem de login, pois o token é importante.

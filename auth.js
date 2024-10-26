@@ -1,4 +1,3 @@
-
 const jwt = require('jsonwebtoken');
 let usuarios = require('./usuarios');
 
@@ -8,7 +7,9 @@ function verificarJWT(requisicao, resposta, next) {
         return resposta.status(401).send({mensagem: "Token de autenticação não informado."});
     }
 
-    jwt.verify(token, "ISSOEUMSEGREDO", function (erro, decodificado){
+    const segredo = process.env.SEGREDO_JWT || "ISSOEUMSEGREDO";
+
+    jwt.verify(token, segredo, function (erro, decodificado){
        if(erro) {
            return resposta.status(500).send({mensagem: "Token de autenticação não é valido."});
        }

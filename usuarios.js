@@ -1,6 +1,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
-const sequelize = new Sequelize('mysql://super_kawaii_gym:example@dbmysql:3306/super_kawaii_gym')
+const uriConexaoBd = process.env.URI_CONEXAO_BD || "mysql://usuario:senha@localhost:3306/banco_de_dados";
+const sequelize = new Sequelize(uriConexaoBd)
 
 sequelize.authenticate().then(() => {
    console.log('Autenticação com o banco de dados bem sucedida');
