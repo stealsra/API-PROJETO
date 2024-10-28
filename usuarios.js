@@ -1,6 +1,6 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
-const uriConexaoBd = process.env.URI_CONEXAO_BD || "mysql://usuario:senha@localhost:3306/banco_de_dados";
+const uriConexaoBd = process.env.URI_CONEXAO_BD || "mysql://stephalsra:931004@localhost:8800/banco_de_dados";
 const sequelize = new Sequelize(uriConexaoBd)
 
 sequelize.authenticate().then(() => {
