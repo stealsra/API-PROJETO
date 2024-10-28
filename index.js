@@ -27,7 +27,7 @@ app.post('/login', (requisicao, resposta, next) => {
             const token = jwt.sign({id}, segredo, {
                 expiresIn: 300
             });
-            // Não alterar a mensagem de login, pois o token é importante.
+          
             return resposta.status(200).send({'ID': id, 'token': token})
         }
         else
